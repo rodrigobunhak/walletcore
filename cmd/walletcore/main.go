@@ -35,7 +35,7 @@ func main() {
 	uow := uow.NewUow(ctx, db)
 
 	uow.Register("AccountDB", func (tx *sql.Tx) interface{} {
-		return database.NewAccountDB(db) // TODO: Ver se posso passar apenas accountDb
+		return accountDb // TODO: Ver se posso passar apenas accountDb
 	})
 
 	uow.Register("TransactionDB", func (tx *sql.Tx) interface{} {

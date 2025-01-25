@@ -33,7 +33,7 @@ Content-Type: application/json
 {
   "account_id_from": "a2bc222e-bf62-458e-88f5-c2187bf8d44d",
   "account_id_to": "807035f3-5888-458a-a7d1-8abfe7090255",
-  "amount": 280
+  "amount": 100
 }
 
 ###
@@ -44,5 +44,5 @@ Content-Type: application/json
 {
   "account_id_from": "807035f3-5888-458a-a7d1-8abfe7090255",
   "account_id_to": "a2bc222e-bf62-458e-88f5-c2187bf8d44d",
-  "amount": 280
+  "amount": 100
 }
