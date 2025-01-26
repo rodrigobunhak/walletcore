@@ -5,15 +5,18 @@ import (
 	"database/sql"
 	"fmt"
 
+	ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/database"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/event"
+	"github.com/rodrigobunhak/fc-ms-wallet/internal/event/handler"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/usecase/create_account"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/usecase/create_client"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/usecase/create_transaction"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/web"
 	"github.com/rodrigobunhak/fc-ms-wallet/internal/web/webserver"
 	"github.com/rodrigobunhak/fc-ms-wallet/pkg/events"
+	"github.com/rodrigobunhak/fc-ms-wallet/pkg/kafka"
 	"github.com/rodrigobunhak/fc-ms-wallet/pkg/uow"
 )
 
